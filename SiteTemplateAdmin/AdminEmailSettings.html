@@ -1,0 +1,150 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>AdminEmailSettings</title>
+<meta content="CodeCharge Studio 3.0.3.1" name="GENERATOR">
+<link href="Styles/Blueprint/Style.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+{Menu} 
+<!-- BEGIN Record EmailDefault -->
+<form name="{HTMLFormName}" action="{Action}" method="post">
+  <table cellspacing="0" cellpadding="0" align="center" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td> 
+            <th>Edit Email&nbsp;Settings</th>
+ 
+            <td class="HeaderRight"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <th>SiteURL</th>
+ 
+            <td><input maxlength="100" size="50" value="{EmailDefaultSiteURL}" name="{EmailDefaultSiteURL_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>SMTPServer</th>
+ 
+            <td><input maxlength="100" size="50" value="{EmailDefaultSMTPServer}" name="{EmailDefaultSMTPServer_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>SMTPPort</th>
+ 
+            <td><input maxlength="10" size="10" value="{EmailDefaultSMTPPort}" name="{EmailDefaultSMTPPort_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>SMTPAuthentication</th>
+ 
+            <td><input type="checkbox" value="1" name="{EmailDefaultSMTPAuthentication_Name}" {EmailDefaultSMTPAuthentication}></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>SMTPUser Name</th>
+ 
+            <td><input maxlength="100" size="50" value="{EmailDefaultSMTPUserName}" name="{EmailDefaultSMTPUserName_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>SMTPPassword</th>
+ 
+            <td><input maxlength="100" size="50" value="{EmailDefaultSMTPPassword}" name="{EmailDefaultSMTPPassword_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>From Address</th>
+ 
+            <td><input maxlength="100" size="50" value="{EmailDefaultFromAddress}" name="{EmailDefaultFromAddress_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>From Name</th>
+ 
+            <td><input maxlength="100" size="50" value="{EmailDefaultFromName}" name="{EmailDefaultFromName_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Reply To Address</th>
+ 
+            <td><input maxlength="100" size="50" value="{EmailDefaultReplyToAddress}" name="{EmailDefaultReplyToAddress_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Reply To Name</th>
+ 
+            <td><input maxlength="50" size="50" value="{EmailDefaultReplyToName}" name="{EmailDefaultReplyToName_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Bounce Back Email</th>
+ 
+            <td><input maxlength="100" size="50" value="{EmailDefaultBounceBackEmail}" name="{EmailDefaultBounceBackEmail_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Bounce Back Email Password</th>
+ 
+            <td><input maxlength="50" size="50" value="{EmailDefaultBounceBackEmailPassword}" name="{EmailDefaultBounceBackEmailPassword_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>POPServer</th>
+ 
+            <td><input maxlength="100" size="50" value="{EmailDefaultPOPServer}" name="{EmailDefaultPOPServer_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>POPPort</th>
+ 
+            <td><input maxlength="10" size="10" value="{EmailDefaultPOPPort}" name="{EmailDefaultPOPPort_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>DNS</th>
+ 
+            <td><input type="checkbox" value="1" name="{EmailDefaultDNS_Name}" {EmailDefaultDNS}></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>DNSHelo</th>
+ 
+            <td><input maxlength="100" size="50" value="{EmailDefaultDNSHelo}" name="{EmailDefaultDNSHelo_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Admin Email Address</th>
+ 
+            <td><input maxlength="100" size="50" value="{EmailDefaultAdminEmailAddress}" name="{EmailDefaultAdminEmailAddress_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Unsubscribe URL</th>
+ 
+            <td><input maxlength="200" size="50" value="{EmailDefaultUnsubscribeURL}" name="{EmailDefaultUnsubscribeURL_Name}"></td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td align="right" colspan="2">
+              <!-- BEGIN Button Button_Update --><input type="submit" value="Submit" name="{Button_Name}"><!-- END Button Button_Update -->
+              <!-- BEGIN Button Button_Cancel --><input type="submit" value="Cancel" name="{Button_Name}"><!-- END Button Button_Cancel --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record EmailDefault --><br>
+</body>
+</html>

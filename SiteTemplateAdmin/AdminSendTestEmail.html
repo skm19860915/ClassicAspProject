@@ -1,0 +1,114 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>AdminSendTestEmail</title>
+<meta content="CodeCharge Studio 3.0.3.1" name="GENERATOR">
+<link href="Styles/Blueprint/Style.css" type="text/css" rel="stylesheet">
+<script type="text/javascript">
+        function checkRequiredFields(thisForm) {
+                var errorMsg = '';
+                if(thisForm.ToAddress.value == '')
+                        errorMsg += '\n - To Address';
+                if(thisForm.EmailTemplateID.selectedIndex == 0)
+                        errorMsg += '\n - Email Template';
+
+                if(errorMsg != '') {
+                        errorMsg = 'There was a problem sending the email.\nThe following fields are missing:' + errorMsg;
+                        alert(errorMsg);
+                        return false;
+                }
+
+                return true;
+        }
+</script>
+</head>
+<body>
+{Menu} 
+<!-- BEGIN Record SendEmail -->
+<form name="{HTMLFormName}" onsubmit="return checkRequiredFields(this);" action="AdminSendTestEmailProcess.asp" method="post">
+  <table cellspacing="0" cellpadding="0" align="center" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td> 
+            <th>Send Email&nbsp;</th>
+ 
+            <td class="HeaderRight"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <th>To Address</th>
+ 
+            <td><input name="ToAddress"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>CC Address</th>
+ 
+            <td><input name="CCAddress"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>BCC Address</th>
+ 
+            <td><input name="BCCAddress"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>From Address</th>
+ 
+            <td><input name="FromAddress"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>From Name</th>
+ 
+            <td><input name="FromName"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Reply To Address</th>
+ 
+            <td><input name="ReplyToAddress"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Reply To Name</th>
+ 
+            <td><input name="ReplyToName"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Email Template</th>
+ 
+            <td>
+              <select name="{EmailTemplateID_Name}">
+                <option value="" selected>Select Value</option>
+                {EmailTemplateID_Options}
+              </select>
+ <input type="hidden" value="{SiteID}" name="{SiteID_Name}"></td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td colspan="2">
+              <div align="center">
+                <input id="Submit" type="submit" value="Send Email" name="Submit">
+              </div>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record SendEmail -->
+</body>
+</html>

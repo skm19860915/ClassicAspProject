@@ -1,0 +1,232 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>AdminSystemSettings</title>
+<meta content="CodeCharge Studio 3.0.3.1" name="GENERATOR">
+<link href="Styles/Blueprint/Style.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+{Menu} 
+<!-- BEGIN Record Site -->
+<form name="{HTMLFormName}" action="{Action}" method="post">
+  <table cellspacing="0" cellpadding="0" align="center" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td> 
+            <th>Add/Edit Site </th>
+ 
+            <td class="HeaderRight"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <th>Name</th>
+ 
+            <td><input maxlength="100" size="50" value="{SiteName}" name="{SiteName_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Domain Name</th>
+ 
+            <td><input id="{SiteDomainName_Name}" maxlength="100" size="50" value="{SiteDomainName}" name="{SiteDomainName_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Description</th>
+ 
+            <td><textarea name="{SiteDescription_Name}" rows="3" cols="50">{SiteDescription}</textarea></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Max Number of Template Blocks</th>
+ 
+            <td><input maxlength="10" size="10" value="{SiteMaxTemplateBlocks}" name="{SiteMaxTemplateBlocks_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Main&nbsp;Template</th>
+ 
+            <td>
+              <select name="{SiteMainTemplateID_Name}">
+                <option value="" selected>Select Value</option>
+                {SiteMainTemplateID_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>URL Encryption Key</th>
+ 
+            <td><input maxlength="100" size="50" value="{SiteURLEncryptionKey}" name="{SiteURLEncryptionKey_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Data Encryption Key</th>
+ 
+            <td><input maxlength="100" size="50" value="{SiteDataEncryptionKey}" name="{SiteDataEncryptionKey_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Tracking String</th>
+ 
+            <td><input maxlength="50" size="50" value="{SiteTrackingString}" name="{SiteTrackingString_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Tracking Link Length</th>
+ 
+            <td><input maxlength="10" size="10" value="{SiteTrackingLinkLength}" name="{SiteTrackingLinkLength_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Tracking Cookie TTL</th>
+ 
+            <td><input maxlength="10" size="10" value="{SiteTrackingCookieTTL}" name="{SiteTrackingCookieTTL_Name}">&nbsp;days</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Default URL</th>
+ 
+            <td><input maxlength="200" size="50" value="{SiteDefaultURL}" name="{SiteDefaultURL_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Referer Cookie TTL</th>
+ 
+            <td><input maxlength="10" size="10" value="{SiteRefererCookieTTL}" name="{SiteRefererCookieTTL_Name}">&nbsp;days</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Default Page</th>
+ 
+            <td>
+              <select name="{SiteDefaultPageTemplateID_Name}">
+                <option value="" selected>Select Value</option>
+                {SiteDefaultPageTemplateID_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Authorization</th>
+ 
+            <td><input maxlength="50" size="50" value="{SiteAuthorization}" name="{SiteAuthorization_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Authorize Login</th>
+ 
+            <td><input maxlength="50" size="50" value="{SiteAuthorizeLogin}" name="{SiteAuthorizeLogin_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Authorize Transaction Key</th>
+ 
+            <td><input maxlength="50" size="50" value="{SiteAuthorizeTransactionKey}" name="{SiteAuthorizeTransactionKey_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Authorize Description</th>
+ 
+            <td><input maxlength="100" size="50" value="{SiteAuthorizeDescription}" name="{SiteAuthorizeDescription_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Pro Price</th>
+ 
+            <td><input maxlength="20" value="{SiteProPrice}" name="{SiteProPrice_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Use Editor</th>
+ 
+            <td><input type="checkbox" value="1" name="{SiteUseEditor_Name}" {SiteUseEditor}></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Debug Mode</th>
+ 
+            <td><input type="checkbox" value="1" name="{SiteDebugMode_Name}" {SiteDebugMode}></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Debug IP</th>
+ 
+            <td><textarea name="{SiteDebugIP_Name}" rows="3" cols="50">{SiteDebugIP}</textarea></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Debug Mode Cookie TTL</th>
+ 
+            <td><input maxlength="10" size="10" value="{SiteDebugModeCookieTTL}" name="{SiteDebugModeCookieTTL_Name}">&nbsp;days&nbsp;&nbsp;
+              &nbsp;<a href="http://{DebugDomainName}/DMC.asp" target="CreateDMC">Create
+              Debug Mode Cookie</a><iframe style="VISIBILITY: hidden; WIDTH: 0px; POSITION: absolute; HEIGHT: 0px" name="CreateDMC"></iframe></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Content Management IP</th>
+ 
+            <td><textarea name="{SiteContentManagementIP_Name}" rows="3" cols="50">{SiteContentManagementIP}</textarea></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Content Management Mode Cookie TTL</th>
+ 
+            <td><input maxlength="10" size="10" value="{SiteContentManagementModeCookieTTL}" name="{SiteContentManagementModeCookieTTL_Name}">&nbsp;days&nbsp;&nbsp;
+              &nbsp;<a href="http://{DebugDomainName}/CMC.asp" target="CreateDMC">Create
+              Content Management Mode Cookie</a></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Redirect Page On Error</th>
+ 
+            <td><input maxlength="200" size="50" value="{SiteRedirectPageOnError}" name="{SiteRedirectPageOnError_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Login Page</th>
+ 
+            <td><input maxlength="200" size="50" value="{SiteLoginPage}" name="{SiteLoginPage_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Upload Path</th>
+ 
+            <td><input maxlength="200" size="50" value="{SiteUploadPath}" name="{SiteUploadPath_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Page Template Execute ASP Path</th>
+ 
+            <td><input maxlength="200" size="50" value="{SitePageTemplateExecuteASPPath}" name="{SitePageTemplateExecuteASPPath_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Custom 404 Script Name</th>
+ 
+            <td><input maxlength="200" size="50" value="{SiteCustom404ScriptName}" name="{SiteCustom404ScriptName_Name}"></td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td align="right" colspan="2">
+              <!-- BEGIN Button Button_Insert --><input type="submit" value="Add" name="{Button_Name}"><!-- END Button Button_Insert -->
+              <!-- BEGIN Button Button_Update --><input type="submit" value="Submit" name="{Button_Name}"><!-- END Button Button_Update -->
+              <!-- BEGIN Button Button_Cancel --><input type="submit" value="Cancel" name="{Button_Name}"><!-- END Button Button_Cancel --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record Site --><br>
+<br>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>AdminUserTableList</title>
+<meta content="CodeCharge Studio 3.0.3.1" name="GENERATOR">
+<link href="Styles/Blueprint/Style.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+{Menu} 
+<!-- BEGIN Record UserTableSearch -->
+<form name="{HTMLFormName}" action="{Action}" method="post">
+  <table cellspacing="0" cellpadding="0" align="center" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td> 
+            <th>Search User Table </th>
+ 
+            <td class="HeaderRight"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="5">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <th>Search String</th>
+ 
+            <td colspan="2"><input maxlength="250" value="{searchString}" name="{searchString_Name}"></td> 
+            <th>Records per page</th>
+ 
+            <td>
+              <select name="{UserTablePageSize_Name}">
+                {UserTablePageSize_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td align="right" colspan="5">
+              <!-- BEGIN Button Button_DoSearch --><input type="submit" value="Search" name="{Button_Name}"><!-- END Button Button_DoSearch --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record UserTableSearch --><br>
+<!-- BEGIN Grid UserTable -->
+<table cellspacing="0" cellpadding="0" align="center" border="0">
+  <tr>
+    <td valign="top">
+      <table class="Header" cellspacing="0" cellpadding="0" border="0">
+        <tr>
+          <td class="HeaderLeft"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td> 
+          <th>List of User Table <a href="{Link1_Src}">[New User]</a></th>
+ 
+          <td class="HeaderRight"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td>
+        </tr>
+      </table>
+ 
+      <table class="Grid" cellspacing="0" cellpadding="0">
+        <tr class="Row">
+          <td colspan="3">Total Records:&nbsp; {UserTable_TotalRecords} </td>
+        </tr>
+ 
+        <tr class="Caption">
+          <th>
+          <!-- BEGIN Sorter Sorter_UserLogin -->User Login 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Asc_Off --><a href="{Asc_URL}"><img src="Styles/Blueprint/Images/AscOff.gif" border="0"></a><!-- END Asc_Off -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif" border="0"><!-- END Desc_On -->
+          <!-- BEGIN Desc_Off --><a href="{Desc_URL}"><img src="Styles/Blueprint/Images/DescOff.gif" border="0"></a><!-- END Desc_Off --><!-- END Sorter Sorter_UserLogin --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_UserGroupName -->User Group 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Asc_Off --><a href="{Asc_URL}"><img src="Styles/Blueprint/Images/AscOff.gif" border="0"></a><!-- END Asc_Off -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif" border="0"><!-- END Desc_On -->
+          <!-- BEGIN Desc_Off --><a href="{Desc_URL}"><img src="Styles/Blueprint/Images/DescOff.gif" border="0"></a><!-- END Desc_Off --><!-- END Sorter Sorter_UserGroupName --></th>
+ 
+          <th>Active</th>
+        </tr>
+ 
+        <!-- BEGIN Row -->
+        <tr class="Row">
+          <td><a href="{UserLogin_Src}">{UserLogin}</a>&nbsp;</td> 
+          <td style="TEXT-ALIGN: right">{UserGroupName}&nbsp;</td> 
+          <td style="TEXT-ALIGN: right">{UserTableActive}</td>
+        </tr>
+ <!-- END Row -->
+        <!-- BEGIN AltRow -->
+        <tr class="AltRow">
+          <td><a href="{Alt_UserLogin_Src}">{Alt_UserLogin}</a>&nbsp;</td> 
+          <td style="TEXT-ALIGN: right">{Alt_UserGroupName}&nbsp;</td> 
+          <td style="TEXT-ALIGN: right">{Alt_UserTableActive}</td>
+        </tr>
+ <!-- END AltRow -->
+        <!-- BEGIN NoRecords -->
+        <tr class="NoRecords">
+          <td colspan="3">No records </td>
+        </tr>
+        <!-- END NoRecords -->
+        <tr class="Footer">
+          <td colspan="3">
+            <!-- BEGIN Navigator Navigator -->
+            <!-- BEGIN First_On --><a href="{First_URL}">First</a> <!-- END First_On -->
+            <!-- BEGIN First_Off -->First <!-- END First_Off -->
+            <!-- BEGIN Prev_On --><a href="{Prev_URL}">Prev</a> <!-- END Prev_On -->
+            <!-- BEGIN Prev_Off -->Prev <!-- END Prev_Off -->&nbsp; 
+            <!-- BEGIN Pages -->
+            <!-- BEGIN Page_On --><a href="{Page_URL}">{Page_Number}</a><!-- END Page_On -->
+            <!-- BEGIN Page_Off -->{Page_Number}<!-- END Page_Off --><!-- END Pages -->of&nbsp;{Total_Pages}&nbsp; 
+            <!-- BEGIN Next_On --><a href="{Next_URL}">Next</a> <!-- END Next_On -->
+            <!-- BEGIN Next_Off -->Next <!-- END Next_Off -->
+            <!-- BEGIN Last_On --><a href="{Last_URL}">Last</a> <!-- END Last_On -->
+            <!-- BEGIN Last_Off -->Last <!-- END Last_Off --><!-- END Navigator Navigator --></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- END Grid UserTable --><br>
+</body>
+</html>

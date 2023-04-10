@@ -1,0 +1,113 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>AdminSubscriptionEdit</title>
+<meta content="CodeCharge Studio 3.0.3.1" name="GENERATOR">
+<link href="Styles/Blueprint/Style.css" type="text/css" rel="stylesheet">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include JSFunctions @1-06AC1439
+</script>
+<script language="JavaScript" src="ClientI18N.asp?file=Functions.js&locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include JSFunctions
+
+//page_Subscription_Button_Delete_OnClick @36-65F13B26
+function page_Subscription_Button_Delete_OnClick()
+{
+    var result;
+//End page_Subscription_Button_Delete_OnClick
+
+//Confirmation Message @37-8243B274
+    return confirm('Delete record?');
+//End Confirmation Message
+
+//Close page_Subscription_Button_Delete_OnClick @36-BC33A33A
+    return result;
+}
+//End Close page_Subscription_Button_Delete_OnClick
+
+//page_Subscription_Button_Cancel_OnClick @38-E2FFBDF7
+function page_Subscription_Button_Cancel_OnClick()
+{
+    disableValidation = true;
+}
+//End page_Subscription_Button_Cancel_OnClick
+
+//bind_events @1-6DA1B6A7
+function bind_events() {
+    if (document.forms["Subscription"]) check_and_bind('document.forms["Subscription"].Button_Delete','onclick',page_Subscription_Button_Delete_OnClick);
+    if (document.forms["Subscription"]) check_and_bind('document.forms["Subscription"].Button_Cancel','onclick',page_Subscription_Button_Cancel_OnClick);
+    forms_onload();
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+</head>
+<body>
+{Menu} 
+<!-- BEGIN Record Subscription -->
+<form name="{HTMLFormName}" action="{Action}" method="post">
+  <table cellspacing="0" cellpadding="0" align="center" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td> 
+            <th>Add/Edit Subscription </th>
+ 
+            <td class="HeaderRight"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <th>Type</th>
+ 
+            <td>
+              <select name="{SubscriptionType_Name}">
+                {SubscriptionType_Options}
+              </select>
+ <input style="WIDTH: 30px; HEIGHT: 22px" type="hidden" size="1" value="{PageTemplateSiteID}" name="{PageTemplateSiteID_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Parent</th>
+ 
+            <td>
+              <select name="{SubscriptionParentID_Name}">
+                <option value="" selected></option>
+                {SubscriptionParentID_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Name</th>
+ 
+            <td><input maxlength="100" size="50" value="{SubscriptionName}" name="{SubscriptionName_Name}"></td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td align="right" colspan="2">
+              <!-- BEGIN Button Button_Insert --><input type="submit" value="Add" name="{Button_Name}"><!-- END Button Button_Insert -->
+              <!-- BEGIN Button Button_Update --><input type="submit" value="Submit" name="{Button_Name}"><!-- END Button Button_Update -->
+              <!-- BEGIN Button Button_Delete --><input type="submit" value="Delete" name="{Button_Name}"><!-- END Button Button_Delete -->
+              <!-- BEGIN Button Button_Cancel --><input type="submit" value="Cancel" name="{Button_Name}"><!-- END Button Button_Cancel --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record Subscription --><br>
+</body>
+</html>

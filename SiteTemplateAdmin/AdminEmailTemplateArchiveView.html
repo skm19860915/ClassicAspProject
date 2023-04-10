@@ -1,0 +1,172 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>AdminEmailTemplateEdit</title>
+<meta content="CodeCharge Studio 3.0.3.1" name="GENERATOR">
+<link href="Styles/Blueprint/Style.css" type="text/css" rel="stylesheet">
+<script src="CommonFunctions.js" type="text/javascript"></script>
+<script type="text/javascript">
+function toggleEmailTypeDetails(emailType) {
+        if(!emailType || emailType.id != 'EmailTemplateEmailType')
+                emailType = document.getElementById('EmailTemplateEmailType');
+
+        var selectedEmailType = emailType.options[emailType.selectedIndex].value;
+
+        toggleFormFieldDisplay('EmailTemplateParentEmailTemplateID', selectedEmailType == 'System' || selectedEmailType == 'User', '', 'EmailType_ParentEmailTemplate');
+}
+
+var winOnload = window.onload;
+window.onload = function() {if(winOnload) winOnload(); toggleEmailTypeDetails();};
+</script>
+</head>
+<body>
+{Menu} 
+<!-- BEGIN Record EmailTemplate -->
+<form name="{HTMLFormName}" action="{Action}" method="post">
+  <table cellspacing="0" cellpadding="0" align="center" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td> 
+            <th>View Archived Email (Date: {Label1})</th>
+ 
+            <td class="HeaderRight"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <th>Email Type</th>
+ 
+            <td>
+              <select id="{EmailTemplateEmailType_Name}" onchange="toggleEmailTypeDetails(this);" name="{EmailTemplateEmailType_Name}">
+                <option value="" selected></option>
+                {EmailTemplateEmailType_Options}
+              </select>
+ <span id="EmailType_ParentEmailTemplate">Template: 
+              <select id="{EmailTemplateParentEmailTemplateID_Name}" name="{EmailTemplateParentEmailTemplateID_Name}">
+                <option value="" selected></option>
+                {EmailTemplateParentEmailTemplateID_Options}
+              </select>
+ </span></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Section</th>
+ 
+            <td>
+              <select name="{EmailTemplateSection_Name}">
+                <option value="" selected></option>
+                {EmailTemplateSection_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Nickname</th>
+ 
+            <td><input maxlength="200" size="50" value="{EmailTemplateNickname}" name="{EmailTemplateNickname_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Name</th>
+ 
+            <td><input maxlength="50" size="50" value="{EmailTemplateName}" name="{EmailTemplateName_Name}"><input style="WIDTH: 30px; HEIGHT: 22px" type="hidden" size="3" value="{EmailTemplateSiteID}" name="{EmailTemplateSiteID_Name}"><input style="WIDTH: 30px; HEIGHT: 22px" type="hidden" size="4" value="{EmailTemplateUserLastUpdateBy}" name="{EmailTemplateUserLastUpdateBy_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>To Address</th>
+ 
+            <td><input maxlength="250" size="50" value="{EmailTemplateToAddress}" name="{EmailTemplateToAddress_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>From Address</th>
+ 
+            <td><input maxlength="100" size="50" value="{EmailTemplateFromAddress}" name="{EmailTemplateFromAddress_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>From Name</th>
+ 
+            <td><input maxlength="100" size="50" value="{EmailTemplateFromName}" name="{EmailTemplateFromName_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Reply To Address</th>
+ 
+            <td><input maxlength="100" size="50" value="{EmailTemplateReplyToAddress}" name="{EmailTemplateReplyToAddress_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Reply To Name</th>
+ 
+            <td><input maxlength="100" size="50" value="{EmailTemplateReplyToName}" name="{EmailTemplateReplyToName_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Bounce Back Email</th>
+ 
+            <td><input maxlength="100" size="50" value="{EmailTemplateBounceBackEmail}" name="{EmailTemplateBounceBackEmail_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Embed Images</th>
+ 
+            <td><input type="checkbox" value="1" name="{EmailTemplateEmbedImages_Name}" {EmailTemplateEmbedImages}></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Image URL</th>
+ 
+            <td><input size="50" value="{EmailTemplateImageURL}" name="{EmailTemplateImageURL_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Image Path</th>
+ 
+            <td><input maxlength="100" size="50" value="{EmailTemplateImagePath}" name="{EmailTemplateImagePath_Name}"><input type="hidden" value="{EmailTemplateImagePhysicalPath}" name="{EmailTemplateImagePhysicalPath_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Subject</th>
+ 
+            <td><input maxlength="100" size="50" value="{EmailTemplateSubject}" name="{EmailTemplateSubject_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Body</th>
+ 
+            <td><textarea style="OVERFLOW-X: hidden; WIDTH: 480px; HEIGHT: 180px" name="{EmailTemplateBody_Name}">{EmailTemplateBody}</textarea></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Body Text Only</th>
+ 
+            <td><textarea style="OVERFLOW-X: hidden; WIDTH: 480px; HEIGHT: 180px" name="{EmailTemplateBodyTextOnly_Name}">{EmailTemplateBodyTextOnly}</textarea></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Dynamic Content</th>
+ 
+            <td><textarea style="OVERFLOW-X: hidden; WIDTH: 480px; HEIGHT: 180px" name="{EmailTemplateBodyDynamicContent_Name}">{EmailTemplateBodyDynamicContent}</textarea></td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td align="right" colspan="2">&nbsp;&nbsp; 
+              <!-- BEGIN Button Button_Cancel --><input type="submit" value="Cancel" name="{Button_Name}"><!-- END Button Button_Cancel --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record EmailTemplate --><br>
+</body>
+</html>

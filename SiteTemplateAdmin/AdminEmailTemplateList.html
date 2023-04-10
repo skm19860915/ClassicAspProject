@@ -1,0 +1,180 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>AdminEmailTemplateList</title>
+<meta content="CodeCharge Studio 3.0.3.1" name="GENERATOR">
+<link href="Styles/Blueprint/Style.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+{Menu} 
+<!-- BEGIN Record EmailTemplate1 -->
+<form name="{HTMLFormName}" action="{Action}" method="post">
+  <table cellspacing="0" cellpadding="0" align="center" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td> 
+            <th>Search Email Template </th>
+ 
+            <td class="HeaderRight"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="4">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <th>Keyword</th>
+ 
+            <td><input maxlength="200" size="50" value="{s_keyword}" name="{s_keyword_Name}"></td> 
+            <th>Records per page</th>
+ 
+            <td>
+              <select name="{EmailTemplatePageSize_Name}">
+                {EmailTemplatePageSize_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td align="right" colspan="4">
+              <!-- BEGIN Button Button_DoSearch --><input type="submit" value="Search" name="{Button_Name}"><!-- END Button Button_DoSearch --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record EmailTemplate1 --><br>
+<!-- BEGIN Grid EmailTemplate -->
+<table cellspacing="0" cellpadding="0" width="70%" align="center" border="0">
+  <tr>
+    <td valign="top">
+      <table class="Header" cellspacing="0" cellpadding="0" border="0">
+        <tr>
+          <td class="HeaderLeft"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td> 
+          <th>List of Email Template</th>
+ 
+          <td class="HeaderRight"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td>
+        </tr>
+      </table>
+ 
+      <table class="Grid" cellspacing="0" cellpadding="0">
+        <tr class="Row">
+          <td colspan="10">Email Templates&nbsp;<a href="{Link1_Src}">[New Email
+            Templates]</a> </td>
+        </tr>
+ 
+        <tr class="Caption">
+          <th>
+          <!-- BEGIN Sorter Sorter_EmailID -->ID 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Asc_Off --><a href="{Asc_URL}"><img src="Styles/Blueprint/Images/AscOff.gif" border="0"></a><!-- END Asc_Off -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif" border="0"><!-- END Desc_On -->
+          <!-- BEGIN Desc_Off --><a href="{Desc_URL}"><img src="Styles/Blueprint/Images/DescOff.gif" border="0"></a><!-- END Desc_Off --><!-- END Sorter Sorter_EmailID --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_EmailNickname -->Nickname 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Asc_Off --><a href="{Asc_URL}"><img src="Styles/Blueprint/Images/AscOff.gif" border="0"></a><!-- END Asc_Off -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif" border="0"><!-- END Desc_On -->
+          <!-- BEGIN Desc_Off --><a href="{Desc_URL}"><img src="Styles/Blueprint/Images/DescOff.gif" border="0"></a><!-- END Desc_Off --><!-- END Sorter Sorter_EmailNickname --></th>
+ 
+          <th>Section</th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_EmailName -->Name 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Asc_Off --><a href="{Asc_URL}"><img src="Styles/Blueprint/Images/AscOff.gif" border="0"></a><!-- END Asc_Off -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif" border="0"><!-- END Desc_On -->
+          <!-- BEGIN Desc_Off --><a href="{Desc_URL}"><img src="Styles/Blueprint/Images/DescOff.gif" border="0"></a><!-- END Desc_Off --><!-- END Sorter Sorter_EmailName --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_EmailToAddress -->To Address 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Asc_Off --><a href="{Asc_URL}"><img src="Styles/Blueprint/Images/AscOff.gif" border="0"></a><!-- END Asc_Off -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif" border="0"><!-- END Desc_On -->
+          <!-- BEGIN Desc_Off --><a href="{Desc_URL}"><img src="Styles/Blueprint/Images/DescOff.gif" border="0"></a><!-- END Desc_Off --><!-- END Sorter Sorter_EmailToAddress --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_EmailFromAddress -->From Address 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Asc_Off --><a href="{Asc_URL}"><img src="Styles/Blueprint/Images/AscOff.gif" border="0"></a><!-- END Asc_Off -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif" border="0"><!-- END Desc_On -->
+          <!-- BEGIN Desc_Off --><a href="{Desc_URL}"><img src="Styles/Blueprint/Images/DescOff.gif" border="0"></a><!-- END Desc_Off --><!-- END Sorter Sorter_EmailFromAddress --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_EmailSubject -->Subject 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Asc_Off --><a href="{Asc_URL}"><img src="Styles/Blueprint/Images/AscOff.gif" border="0"></a><!-- END Asc_Off -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif" border="0"><!-- END Desc_On -->
+          <!-- BEGIN Desc_Off --><a href="{Desc_URL}"><img src="Styles/Blueprint/Images/DescOff.gif" border="0"></a><!-- END Desc_Off --><!-- END Sorter Sorter_EmailSubject --></th>
+ 
+          <th>Type</th>
+ 
+          <th>Updated By</th>
+ 
+          <th>Updated On</th>
+        </tr>
+ 
+        <!-- BEGIN Row -->
+        <tr class="Row">
+          <td style="TEXT-ALIGN: right"><a href="{EmailTemplateID_Src}">{EmailTemplateID}</a>&nbsp;</td> 
+          <td style="TEXT-ALIGN: right">{EmailTemplateNickname}&nbsp;</td> 
+          <td style="TEXT-ALIGN: right">{EmailTemplateSection}&nbsp;</td> 
+          <td>{EmailTemplateName}&nbsp;</td> 
+          <td>{EmailTemplateToAddress}&nbsp;</td> 
+          <td>{EmailTemplateFromAddress}&nbsp;</td> 
+          <td>{EmailTemplateSubject}&nbsp;</td> 
+          <td>{EmailTemplateEmailType}&nbsp;</td> 
+          <td>{EmailTemplateUserLastUpdateBy}</td> 
+          <td>{EmailTemplateUserLastUpdateDateTime}</td>
+        </tr>
+ <!-- END Row -->
+        <!-- BEGIN AltRow -->
+        <tr class="AltRow">
+          <td style="TEXT-ALIGN: right"><a href="{Alt_EmailTemplateID_Src}">{Alt_EmailTemplateID}</a>&nbsp;</td> 
+          <td style="TEXT-ALIGN: right">{Alt_EmailTemplateNickname}&nbsp;</td> 
+          <td style="TEXT-ALIGN: right">{Alt_EmailTemplateSection}&nbsp;</td> 
+          <td>{Alt_EmailTemplateName}&nbsp;</td> 
+          <td>{Alt_EmailTemplateToAddress}&nbsp;</td> 
+          <td>{Alt_EmailTemplateFromAddress}&nbsp;</td> 
+          <td>{Alt_EmailTemplateSubject}&nbsp;</td> 
+          <td>{Alt_EmailTemplateEmailType}&nbsp;</td> 
+          <td>{Alt_EmailTemplateUserLastUpdateBy}</td> 
+          <td>{Alt_EmailTemplateUserLastUpdateDateTime}</td>
+        </tr>
+ <!-- END AltRow -->
+        <!-- BEGIN NoRecords -->
+        <tr class="NoRecords">
+          <td colspan="10">No records </td>
+        </tr>
+        <!-- END NoRecords -->
+        <tr class="Footer">
+          <td align="left" colspan="6">
+            <!-- BEGIN Navigator Navigator -->
+            <!-- BEGIN First_On --><a href="{First_URL}">First</a> <!-- END First_On -->
+            <!-- BEGIN First_Off -->First <!-- END First_Off -->
+            <!-- BEGIN Prev_On --><a href="{Prev_URL}">Prev</a> <!-- END Prev_On -->
+            <!-- BEGIN Prev_Off -->Prev <!-- END Prev_Off -->&nbsp; 
+            <!-- BEGIN Pages -->
+            <!-- BEGIN Page_On --><a href="{Page_URL}">{Page_Number}</a><!-- END Page_On -->
+            <!-- BEGIN Page_Off -->{Page_Number}<!-- END Page_Off --><!-- END Pages -->of&nbsp;{Total_Pages}&nbsp; 
+            <!-- BEGIN Next_On --><a href="{Next_URL}">Next</a> <!-- END Next_On -->
+            <!-- BEGIN Next_Off -->Next <!-- END Next_Off -->
+            <!-- BEGIN Last_On --><a href="{Last_URL}">Last</a> <!-- END Last_On -->
+            <!-- BEGIN Last_Off -->Last <!-- END Last_Off --><!-- END Navigator Navigator --></td> 
+          <td align="right" colspan="4">Total Records:&nbsp;
+            {EmailTemplate_TotalRecords} </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- END Grid EmailTemplate --><br>
+</body>
+</html>

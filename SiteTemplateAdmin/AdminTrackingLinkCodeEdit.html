@@ -1,0 +1,140 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>AdminTrackingLinkCodeEdit</title>
+<meta content="CodeCharge Studio 3.0.3.1" name="GENERATOR">
+<link href="Styles/Blueprint/Style.css" type="text/css" rel="stylesheet">
+<script src="CommonFunctions.js" type="text/javascript"></script>
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include JSFunctions @1-06AC1439
+</script>
+<script language="JavaScript" src="ClientI18N.asp?file=Functions.js&locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include JSFunctions
+
+//page_TrackingLinkCode_Button_Delete_OnClick @5-34BA3F0E
+function page_TrackingLinkCode_Button_Delete_OnClick()
+{
+    var result;
+//End page_TrackingLinkCode_Button_Delete_OnClick
+
+//Confirmation Message @6-8243B274
+    return confirm('Delete record?');
+//End Confirmation Message
+
+//Close page_TrackingLinkCode_Button_Delete_OnClick @5-BC33A33A
+    return result;
+}
+//End Close page_TrackingLinkCode_Button_Delete_OnClick
+
+//page_TrackingLinkCode_Button_Cancel_OnClick @7-24BAA095
+function page_TrackingLinkCode_Button_Cancel_OnClick()
+{
+    disableValidation = true;
+}
+//End page_TrackingLinkCode_Button_Cancel_OnClick
+
+//bind_events @1-D7DB026E
+function bind_events() {
+    if (document.forms["TrackingLinkCode"]) check_and_bind('document.forms["TrackingLinkCode"].Button_Delete','onclick',page_TrackingLinkCode_Button_Delete_OnClick);
+    if (document.forms["TrackingLinkCode"]) check_and_bind('document.forms["TrackingLinkCode"].Button_Cancel','onclick',page_TrackingLinkCode_Button_Cancel_OnClick);
+    forms_onload();
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+<script type="text/javascript">
+function toggleLinkTypeDetails(linkType) {
+        if(!linkType || linkType.id != 'TrackingLinkCodeTrackingType')
+                linkType = document.getElementById('TrackingLinkCodeTrackingType');
+
+        var selectedLinkType = linkType.options[linkType.selectedIndex].text;
+
+        toggleFormFieldDisplay('TrackingLinkCodeRedirectToURL', selectedLinkType == 'Incoming' || selectedLinkType == 'Outgoing', '', 'span_TrackingLinkCodeRedirectToURL');
+}
+
+var winOnload = window.onload;
+window.onload = function() {winOnload(); toggleLinkTypeDetails();};
+</script>
+</head>
+<body>
+{Menu} 
+<!-- BEGIN Record TrackingLinkCode -->
+<form name="{HTMLFormName}" action="{Action}" method="post">
+  <table cellspacing="0" cellpadding="0" align="center" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td> 
+            <th>Add/Edit Tracking Link Code </th>
+ 
+            <td class="HeaderRight"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <th>Tracking Link Type</th>
+ 
+            <td><input type="hidden" value="{TrackingLinkCodeSiteID}" name="{TrackingLinkCodeSiteID_Name}">
+              <select id="{TrackingLinkCodeTrackingType_Name}" onchange="toggleLinkTypeDetails(this);" name="{TrackingLinkCodeTrackingType_Name}">
+                <option value="" selected>Select Value</option>
+                {TrackingLinkCodeTrackingType_Options}
+              </select>
+ <span id="span_TrackingLinkCodeRedirectToURL">URL: <input id="{TrackingLinkCodeRedirectToURL_Name}" value="{TrackingLinkCodeRedirectToURL}" name="{TrackingLinkCodeRedirectToURL_Name}"></span></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Tracking Link Group</th>
+ 
+            <td>
+              <select name="{TrackingLinkCodeTrackingLinkGroupID_Name}">
+                <option value="" selected>Select Value</option>
+                {TrackingLinkCodeTrackingLinkGroupID_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Description</th>
+ 
+            <td><input maxlength="100" size="50" value="{TrackingLinkCodeDescription}" name="{TrackingLinkCodeDescription_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Tracking Link Code</th>
+ 
+            <td><input maxlength="50" size="50" value="{TrackingLinkCode}" name="{TrackingLinkCode_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Link</th>
+ 
+            <td>{TrackingLinkCodeLink}&nbsp;</td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td align="right" colspan="2">
+              <!-- BEGIN Button Button_Insert --><input type="submit" value="Add" name="{Button_Name}"><!-- END Button Button_Insert -->
+              <!-- BEGIN Button Button_Update --><input type="submit" value="Submit" name="{Button_Name}"><!-- END Button Button_Update -->
+              <!-- BEGIN Button Button_Delete --><input type="submit" value="Delete" name="{Button_Name}"><!-- END Button Button_Delete -->
+              <!-- BEGIN Button Button_Cancel --><input type="submit" value="Cancel" name="{Button_Name}"><!-- END Button Button_Cancel --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record TrackingLinkCode --><br>
+</body>
+</html>

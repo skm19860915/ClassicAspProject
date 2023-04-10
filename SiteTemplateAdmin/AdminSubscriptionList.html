@@ -1,0 +1,144 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>AdminSubscriptionList</title>
+<meta content="CodeCharge Studio 3.0.3.1" name="GENERATOR">
+<link href="Styles/Blueprint/Style.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+{Menu} 
+<!-- BEGIN Record SubscriptionSearch -->
+<form name="{HTMLFormName}" action="{Action}" method="post">
+  <table cellspacing="0" cellpadding="0" align="center" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td> 
+            <th>Search Subscription </th>
+ 
+            <td class="HeaderRight"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="4">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <th>Keyword</th>
+ 
+            <td><input maxlength="10" size="10" value="{s_keyword}" name="{s_keyword_Name}"></td> 
+            <th>Records per page</th>
+ 
+            <td>
+              <select name="{SubscriptionPageSize_Name}">
+                {SubscriptionPageSize_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td align="right" colspan="4">
+              <!-- BEGIN Button Button_DoSearch --><input type="submit" value="Search" name="{Button_Name}"><!-- END Button Button_DoSearch --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record SubscriptionSearch --><br>
+<!-- BEGIN Grid Subscription -->
+<table cellspacing="0" cellpadding="0" width="80%" align="center" border="0">
+  <tr>
+    <td valign="top">
+      <table class="Header" cellspacing="0" cellpadding="0" border="0">
+        <tr>
+          <td class="HeaderLeft"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td> 
+          <th>List of Subscription </th>
+ 
+          <td class="HeaderRight"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td>
+        </tr>
+      </table>
+ 
+      <table class="Grid" cellspacing="0" cellpadding="0">
+        <tr class="Row">
+          <td colspan="4">Total Records:&nbsp; {Subscription_TotalRecords} </td>
+        </tr>
+ 
+        <tr class="Caption">
+          <th>
+          <!-- BEGIN Sorter Sorter_SubscriptionID -->ID 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Asc_Off --><a href="{Asc_URL}"><img src="Styles/Blueprint/Images/AscOff.gif" border="0"></a><!-- END Asc_Off -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif" border="0"><!-- END Desc_On -->
+          <!-- BEGIN Desc_Off --><a href="{Desc_URL}"><img src="Styles/Blueprint/Images/DescOff.gif" border="0"></a><!-- END Desc_Off --><!-- END Sorter Sorter_SubscriptionID --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_SubscriptionType -->Type 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Asc_Off --><a href="{Asc_URL}"><img src="Styles/Blueprint/Images/AscOff.gif" border="0"></a><!-- END Asc_Off -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif" border="0"><!-- END Desc_On -->
+          <!-- BEGIN Desc_Off --><a href="{Desc_URL}"><img src="Styles/Blueprint/Images/DescOff.gif" border="0"></a><!-- END Desc_Off --><!-- END Sorter Sorter_SubscriptionType --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_SubscriptionName -->Name 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Asc_Off --><a href="{Asc_URL}"><img src="Styles/Blueprint/Images/AscOff.gif" border="0"></a><!-- END Asc_Off -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif" border="0"><!-- END Desc_On -->
+          <!-- BEGIN Desc_Off --><a href="{Desc_URL}"><img src="Styles/Blueprint/Images/DescOff.gif" border="0"></a><!-- END Desc_Off --><!-- END Sorter Sorter_SubscriptionName --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_SubscriptionDateTimeCreated -->Date Time
+          Created 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Asc_Off --><a href="{Asc_URL}"><img src="Styles/Blueprint/Images/AscOff.gif" border="0"></a><!-- END Asc_Off -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif" border="0"><!-- END Desc_On -->
+          <!-- BEGIN Desc_Off --><a href="{Desc_URL}"><img src="Styles/Blueprint/Images/DescOff.gif" border="0"></a><!-- END Desc_Off --><!-- END Sorter Sorter_SubscriptionDateTimeCreated --></th>
+        </tr>
+ 
+        <!-- BEGIN Row -->
+        <tr class="Row">
+          <td style="TEXT-ALIGN: right"><a href="{SubscriptionID_Src}">{SubscriptionID}</a>&nbsp;</td> 
+          <td>{SubscriptionType}&nbsp;</td> 
+          <td>{SubscriptionName}&nbsp;</td> 
+          <td>{SubscriptionDateTimeCreated}&nbsp;</td>
+        </tr>
+ <!-- END Row -->
+        <!-- BEGIN AltRow -->
+        <tr class="AltRow">
+          <td style="TEXT-ALIGN: right"><a href="{Alt_SubscriptionID_Src}">{Alt_SubscriptionID}</a>&nbsp;</td> 
+          <td>{Alt_SubscriptionType}&nbsp;</td> 
+          <td>{Alt_SubscriptionName}&nbsp;</td> 
+          <td>{Alt_SubscriptionDateTimeCreated}&nbsp;</td>
+        </tr>
+ <!-- END AltRow -->
+        <!-- BEGIN NoRecords -->
+        <tr class="NoRecords">
+          <td colspan="4">No records </td>
+        </tr>
+        <!-- END NoRecords -->
+        <tr class="Footer">
+          <td colspan="4">
+            <!-- BEGIN Navigator Navigator -->
+            <!-- BEGIN First_On --><a href="{First_URL}">First</a> <!-- END First_On -->
+            <!-- BEGIN First_Off -->First <!-- END First_Off -->
+            <!-- BEGIN Prev_On --><a href="{Prev_URL}">Prev</a> <!-- END Prev_On -->
+            <!-- BEGIN Prev_Off -->Prev <!-- END Prev_Off -->&nbsp; 
+            <!-- BEGIN Pages -->
+            <!-- BEGIN Page_On --><a href="{Page_URL}">{Page_Number}</a><!-- END Page_On -->
+            <!-- BEGIN Page_Off -->{Page_Number}<!-- END Page_Off --><!-- END Pages -->of&nbsp;{Total_Pages}&nbsp; 
+            <!-- BEGIN Next_On --><a href="{Next_URL}">Next</a> <!-- END Next_On -->
+            <!-- BEGIN Next_Off -->Next <!-- END Next_Off -->
+            <!-- BEGIN Last_On --><a href="{Last_URL}">Last</a> <!-- END Last_On -->
+            <!-- BEGIN Last_Off -->Last <!-- END Last_Off --><!-- END Navigator Navigator --></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- END Grid Subscription --><br>
+</body>
+</html>
